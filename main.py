@@ -39,7 +39,7 @@ def get_stream(yt: YouTube, requested_resolution: str):
 
 
 @app.post("/download_playlist/")
-async def download_playlist(request: PlaylistRequest):
+async def download_playlist(request: VideoRequest):
     try:
         playlist = Playlist(request.url)
         download_paths = []
